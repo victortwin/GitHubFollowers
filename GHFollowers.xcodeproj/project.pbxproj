@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5744A42E2B73D23A00DEE016 /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5744A42D2B73D23A00DEE016 /* GFTextField.swift */; };
+		5744A4302B73E54200DEE016 /* FollowerListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5744A42F2B73E54200DEE016 /* FollowerListVC.swift */; };
 		5751BA542B714DC700763193 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5751BA532B714DC700763193 /* AppDelegate.swift */; };
 		5751BA562B714DC700763193 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5751BA552B714DC700763193 /* SceneDelegate.swift */; };
 		5751BA5D2B714DC900763193 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5751BA5C2B714DC900763193 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		5744A42D2B73D23A00DEE016 /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
+		5744A42F2B73E54200DEE016 /* FollowerListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListVC.swift; sourceTree = "<group>"; };
 		5751BA502B714DC700763193 /* GHFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5751BA532B714DC700763193 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5751BA552B714DC700763193 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				57601F212B72711E0055BA16 /* SearchVC.swift */,
 				57601F232B72715B0055BA16 /* FavoritesListVC.swift */,
 				5744A42D2B73D23A00DEE016 /* GFTextField.swift */,
+				5744A42F2B73E54200DEE016 /* FollowerListVC.swift */,
 			);
 			path = GHFollowers;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 				57601F242B72715B0055BA16 /* FavoritesListVC.swift in Sources */,
 				57601F262B7282750055BA16 /* GFButton.swift in Sources */,
 				57601F222B72711E0055BA16 /* SearchVC.swift in Sources */,
+				5744A4302B73E54200DEE016 /* FollowerListVC.swift in Sources */,
 				5751BA542B714DC700763193 /* AppDelegate.swift in Sources */,
 				5751BA562B714DC700763193 /* SceneDelegate.swift in Sources */,
 			);
