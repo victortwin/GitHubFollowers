@@ -23,7 +23,7 @@ class FavoriteCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     
     func set(favorite: Follower) {
         avatarImageView.downloadImage(fromURL: favorite.avatarUrl)
