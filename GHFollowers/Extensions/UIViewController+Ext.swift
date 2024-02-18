@@ -19,6 +19,7 @@ extension UIViewController {
         }
     }
     
+    
     func presentSafariVC(with url: URL) {
         let safsriVC = SFSafariViewController(url: url)
         safsriVC.preferredControlTintColor = .systemGreen

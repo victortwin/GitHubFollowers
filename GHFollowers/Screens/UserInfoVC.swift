@@ -25,6 +25,7 @@ class UserInfoVC: UIViewController {
     var username: String!
     weak var delegate: UserInfoVCDelegate!
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewController()
@@ -33,11 +34,13 @@ class UserInfoVC: UIViewController {
         getUserInfo()
     }
     
+    
     func configureViewController() {
         view.backgroundColor = .systemBackground
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissVC))
         navigationItem.rightBarButtonItem = doneButton
     }
+    
     
     func configureScrollView() {
         view.addSubview(scrollView)
@@ -50,6 +53,7 @@ class UserInfoVC: UIViewController {
             contentView.heightAnchor.constraint(equalToConstant: 600)
         ])
     }
+    
     
     func getUserInfo() {
         NetworkManager.shared.getUserInfo(for: username) { [weak self] result in
@@ -65,6 +69,7 @@ class UserInfoVC: UIViewController {
         }
     }
     
+    
     func configureUIElements(with user: User) {
         
         self.add(childVC: GFRepoItemVC(user: user, delegate: self), to: self.itemViewOne)
@@ -72,6 +77,7 @@ class UserInfoVC: UIViewController {
         self.add(childVC: GFUserInfoHeaderVC(user: user), to: self.headerView)
         self.dateLabel.text = "GitHub since \(user.createdAt.convertToMonthYearFormat())"
     }
+    
     
     func layoutUI() {
         
@@ -89,8 +95,6 @@ class UserInfoVC: UIViewController {
             ])
         }
         
-        
-        
         NSLayoutConstraint.activate([
             headerView.topAnchor.constraint(equalTo: contentView.topAnchor),
             headerView.heightAnchor.constraint(equalToConstant: 210),
@@ -104,7 +108,6 @@ class UserInfoVC: UIViewController {
             dateLabel.topAnchor.constraint(equalTo: itemViewTwo.bottomAnchor, constant: padding),
             dateLabel.heightAnchor.constraint(equalToConstant: 50)
         ])
-        
     }
     
     
@@ -114,6 +117,7 @@ class UserInfoVC: UIViewController {
         childVC.view.frame = containerView.bounds
         childVC.didMove(toParent: self)
     }
+    
     
     @objc func dismissVC() {
         dismiss(animated: true)
@@ -128,8 +132,6 @@ extension UserInfoVC: GFRepoItemVCDelegate {
         }
         presentSafariVC(with: url)
     }
-    
-    
 }
 
 extension UserInfoVC: GFFollowerItemVCDelegate {

@@ -11,6 +11,7 @@ class GFDataLoadingVC: UIViewController {
     
     var containerView: UIView!
 
+    
     func showLoadingView() {
         
         containerView = UIView(frame: view.bounds)
@@ -34,12 +35,14 @@ class GFDataLoadingVC: UIViewController {
         activityIndicator.startAnimating()
     }
     
+    
     func dismissLoadingView() {
         DispatchQueue.main.async {
             self.containerView.removeFromSuperview()
             self.containerView = nil
         }
     }
+    
     
     func showEmptyStateView(with message: String, in view: UIView) {
         let emptyStateView = GFEmptyStateView(message: message)
